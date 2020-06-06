@@ -1,0 +1,313 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Sprites/ship_parts/wing_left_green.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/ship_parts/cock_pit_blue.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/ship_parts/wing1_brown_left.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/ship_parts/wing_left_red.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/ship_parts/wing_right_green.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/ship_parts/wing1_blue_left.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/ship_parts/wing1_brown_right.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/ship_parts/wing_left_blue.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/ship_parts/wing_right_blue.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/ship_parts/wing_right_red.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/ship_parts/body_purple.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/ship_parts/wing1_blue_right.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/ship_parts/body_red.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/ship_parts/cock_pit_red.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/ship_parts/gun_right.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/ship_parts/cock_pit_orange.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/ship_parts/gun_left.png" type="Texture" id=17]
+[ext_resource path="res://ship_part.gd" type="Script" id=18]
+[ext_resource path="res://bullet.tscn" type="PackedScene" id=19]
+
+[node name="ship_parts" type="Node2D"]
+
+[node name="wings" type="Node2D" parent="."]
+position = Vector2( 73.7832, 20.3776 )
+
+[node name="wing0" type="Area2D" parent="wings"]
+position = Vector2( 38, 16 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wings/wing0"]
+texture = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="wings/wing0"]
+polygon = PoolVector2Array( -15, 0, 15, -10, 15, 7, -15, 10 )
+
+[node name="wing1" type="Area2D" parent="wings"]
+position = Vector2( 73, 16 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wings/wing1"]
+texture = ExtResource( 12 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="wings/wing1"]
+polygon = PoolVector2Array( -15, -10, 15, 0, 15, 10, -15, 7 )
+
+[node name="wing2" type="Area2D" parent="wings"]
+position = Vector2( 37, 37 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wings/wing2"]
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="wings/wing2"]
+polygon = PoolVector2Array( -15, 0, 15, -10, 15, 7, -15, 10 )
+
+[node name="wing3" type="Area2D" parent="wings"]
+position = Vector2( 73, 37 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wings/wing3"]
+texture = ExtResource( 7 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="wings/wing3"]
+polygon = PoolVector2Array( -15, -10, 15, 0, 15, 10, -15, 7 )
+
+[node name="wing4" type="Area2D" parent="wings"]
+position = Vector2( 45, 60 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wings/wing4"]
+position = Vector2( -3, 0 )
+texture = ExtResource( 8 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="wings/wing4"]
+polygon = PoolVector2Array( -9, 17, 2, -11, 3, 14, 0, 19 )
+
+[node name="wing5" type="Area2D" parent="wings"]
+position = Vector2( 61, 58 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wings/wing5"]
+position = Vector2( 4, 0 )
+texture = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="wings/wing5"]
+polygon = PoolVector2Array( -2, 15, -1, -11, 10, 18, 1, 20 )
+
+[node name="wing6" type="Area2D" parent="wings"]
+position = Vector2( 45, 94 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wings/wing6"]
+position = Vector2( -3, 0 )
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="wings/wing6"]
+polygon = PoolVector2Array( -9, 17, 2, -11, 3, 15, 0, 20 )
+
+[node name="wing7" type="Area2D" parent="wings"]
+position = Vector2( 63, 94 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wings/wing7"]
+position = Vector2( 3, 0 )
+texture = ExtResource( 10 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="wings/wing7"]
+polygon = PoolVector2Array( -2, 14, -2, -11, 9, 18, 0, 20 )
+
+[node name="wing8" type="Area2D" parent="wings"]
+position = Vector2( 44, 131 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wings/wing8"]
+position = Vector2( -3, 0 )
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="wings/wing8"]
+polygon = PoolVector2Array( -9, 17, 2, -11, 3, 15, 0, 20 )
+
+[node name="wing9" type="Area2D" parent="wings"]
+position = Vector2( 63, 131 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wings/wing9"]
+position = Vector2( 3, 0 )
+texture = ExtResource( 5 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="wings/wing9"]
+polygon = PoolVector2Array( -3, 15, -2, -11, 9, 18, 2, 20 )
+
+[node name="ship_body" type="Node2D" parent="."]
+position = Vector2( 43.9231, 54.2308 )
+
+[node name="body0" type="Area2D" parent="ship_body"]
+position = Vector2( -11, 2 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+is_body = true
+
+[node name="Sprite" type="Sprite" parent="ship_body/body0"]
+texture = ExtResource( 11 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ship_body/body0"]
+polygon = PoolVector2Array( -7, 10, -6, -16, -3, -19, 3, -19, 6, -16, 7, 10, 0, 19 )
+
+[node name="body1" type="Area2D" parent="ship_body"]
+position = Vector2( 10, 2 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+is_body = true
+
+[node name="Sprite" type="Sprite" parent="ship_body/body1"]
+texture = ExtResource( 13 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ship_body/body1"]
+polygon = PoolVector2Array( -7, 10, -6, -16, -3, -19, 3, -19, 6, -16, 7, 10, 0, 19 )
+
+[node name="guns" type="Node2D" parent="."]
+position = Vector2( 47.3496, 110.825 )
+
+[node name="gun0" type="Area2D" parent="guns"]
+position = Vector2( -11, 2 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+is_gun = true
+bullet = ExtResource( 19 )
+
+[node name="Sprite" type="Sprite" parent="guns/gun0"]
+texture = ExtResource( 17 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="guns/gun0"]
+polygon = PoolVector2Array( -3, 6, -2, -1, -1, -6, 1, -6, 2, -1, 3, 4, 1, 5 )
+
+[node name="Timer" type="Timer" parent="guns/gun0"]
+one_shot = true
+
+[node name="gun1" type="Area2D" parent="guns"]
+position = Vector2( 10, 2 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+is_gun = true
+bullet = ExtResource( 19 )
+
+[node name="Sprite" type="Sprite" parent="guns/gun1"]
+texture = ExtResource( 15 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="guns/gun1"]
+polygon = PoolVector2Array( -3, 4, -2, -1, -1, -6, 1, -6, 2, -1, 3, 6, 0, 6 )
+
+[node name="Timer" type="Timer" parent="guns/gun1"]
+one_shot = true
+
+[node name="guns2" type="Node2D" parent="."]
+position = Vector2( 47.5245, 90.5525 )
+
+[node name="gun0" type="Area2D" parent="guns2"]
+position = Vector2( -11, 2 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+is_gun = true
+bullet = ExtResource( 19 )
+
+[node name="Sprite" type="Sprite" parent="guns2/gun0"]
+texture = ExtResource( 17 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="guns2/gun0"]
+polygon = PoolVector2Array( -3, 6, -2, -1, -1, -6, 1, -6, 2, -1, 3, 4, 1, 5 )
+
+[node name="Timer" type="Timer" parent="guns2/gun0"]
+one_shot = true
+
+[node name="gun1" type="Area2D" parent="guns2"]
+position = Vector2( 10, 2 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+is_gun = true
+bullet = ExtResource( 19 )
+
+[node name="Sprite" type="Sprite" parent="guns2/gun1"]
+texture = ExtResource( 15 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="guns2/gun1"]
+polygon = PoolVector2Array( -3, 4, -2, -1, -1, -6, 1, -6, 2, -1, 3, 6, 0, 6 )
+
+[node name="Timer" type="Timer" parent="guns2/gun1"]
+one_shot = true
+
+[node name="cockpit" type="Node2D" parent="."]
+position = Vector2( 47, 146 )
+
+[node name="cockpit0" type="Area2D" parent="cockpit"]
+position = Vector2( -11, 2 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="cockpit/cockpit0"]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cockpit/cockpit0"]
+polygon = PoolVector2Array( -3, 4, -2, -5, 2, -5, 3, 4, 0, 6 )
+
+[node name="cockpit1" type="Area2D" parent="cockpit"]
+position = Vector2( 10, 2 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="cockpit/cockpit1"]
+texture = ExtResource( 16 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cockpit/cockpit1"]
+polygon = PoolVector2Array( -3, 4, -2, -5, 2, -5, 3, 4, 0, 6 )
+
+[node name="cockpit2" type="Area2D" parent="cockpit"]
+position = Vector2( 0, 13 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="cockpit/cockpit2"]
+texture = ExtResource( 14 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cockpit/cockpit2"]
+polygon = PoolVector2Array( -3, 4, -2, -5, 2, -5, 3, 4, 0, 6 )
